@@ -23,8 +23,8 @@ const MessageContainer = () => {
 					className='w-12 h-12 rounded-full object-cover'
 				/>
 				<div>
-					<p className='text-gray-400 text-xl font-bold'>{authUser.fullName}</p>
-					<p className='text-gray-700'>@{authUser.username}</p>
+					<p className='text-gray-100 text-xl font-bold'>{authUser.fullName}</p>
+					
 					
 				</div>
 				</div>

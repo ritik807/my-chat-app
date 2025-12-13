@@ -7,7 +7,7 @@ const Sidebar = () => {
     return (
         <div className='border-r border-slate-500 p-4 py-4 flex flex-col '>
             <div className="flex items-center  justify-center mb-4 px-3">
-                <img src={logo} alt="logo" className=" w-32  h-16" />
+                <img src={logo} alt="logo" className=" w-32  h-16 rounded-full" />
 
             </div>
             <SearchInput />

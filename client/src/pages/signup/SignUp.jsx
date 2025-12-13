@@ -30,7 +30,7 @@ const SignUp = () => {
 			<h1 className='text-4xl text-blue-500  font-bold text-center '>
 					Sign Up 
 				</h1>
-				<img src={pic} alt='pic' className=' w-16 h-16 mx-auto mt-2' />
+				<img src={pic} alt='pic' className=' w-40 h-16 mx-auto mt-2 rounded-full' />
 
 				<form onSubmit={handleSubmit}>
 					<div>
@@ -39,7 +39,7 @@ const SignUp = () => {
 						</label>
 						<input
 							type='text'
-							placeholder='John Doe'
+							placeholder='Enter full Name'
 							className='w-full input input-bordered  h-10'
 							value={inputs.fullName}
 							onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })}
@@ -52,7 +52,7 @@ const SignUp = () => {
 						</label>
 						<input
 							type='text'
-							placeholder='johndoe'
+							placeholder='Enter userName'
 							className='w-full input input-bordered h-10'
 							value={inputs.username}
 							onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
@@ -87,19 +87,21 @@ const SignUp = () => {
 
 					<GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender} />
 
-					<Link
+				
+
+					<div>
+						<button className='rounded-2xl hover:bg-green-600 btn-block bg-green-500 text-black  text-lg btn-sm mt-2' disabled={loading}>
+							{loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
+						</button>
+					</div>
+
+						<Link
 						to={"/login"}
-						className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'
+						className='text-sm hover:underline hover:text-white mt-2 flex justify-end font-semibold'
 						href='#'
 					>
 						Already have an account?
 					</Link>
-
-					<div>
-						<button className='rounded-2xl hover:bg-blue-600 btn-block bg-blue-500 text-black  text-lg btn-sm mt-2' disabled={loading}>
-							{loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
-						</button>
-					</div>
 				</form>
 			</div>
 		</div>

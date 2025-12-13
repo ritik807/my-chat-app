@@ -21,7 +21,7 @@ const Login = () => {
 					Login
 					<span className='text-blue-500'> </span>
 				</h1>
-				<img src={pic} alt='pic' className=' py-4  w-32 h-32 mx-auto' />
+				<img src={pic} alt='pic' className=' py-4  w-32 h-32 mx-auto rounded-full' />
 
 				<form onSubmit={handleSubmit}>
 					<div>
@@ -49,15 +49,17 @@ const Login = () => {
 							onChange={(e) => setPassword(e.target.value)}
 						/>
 					</div>
-					<Link to='/signup' className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
-						{"Don't"} have an account?
-					</Link>
+					
 
 					<div>
-						<button className=' rounded-2xl hover:bg-blue-600 btn-block bg-blue-500  text-lg btn-sm mt-2  text-black' disabled={loading}>
+						<button className=' rounded-2xl hover:bg-green-600 btn-block bg-green-500  text-lg btn-sm mt-4  text-black' disabled={loading}>
 							{loading ? <span className='loading loading-spinner '></span> : "Login"}
 						</button>
 					</div>
+
+					<Link to='/signup' className='text-sm  hover:underline hover:text-white mt-2 flex justify-end font-semibold'>
+						{"Don't"} have an account?
+					</Link>
 				</form>
 			</div>
 		</div>
